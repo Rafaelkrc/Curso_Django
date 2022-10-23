@@ -25,3 +25,6 @@ jobs:
         - name: Rodar flake8
           run: |
             pipenv run flake8 .
+        - name: Rodar os Testes
+          run: |
+            pipenv run pytest
