@@ -28,6 +28,8 @@ jobs:
         - name: Rodar os Testes
           run: |
             pipenv run pytest --cov=pypro
-        - name: Relatório de Cobertura de Testes
+        - name: Relatório Coverage
+          env:
+            CODECOV_TOKEN: '03525e52-3f9c-4cd9-97ac-ea5fdea1f317'
           run: |
             pipenv run codecov
