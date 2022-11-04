@@ -10,7 +10,7 @@
 
     <meta name="description" content="Página de apresentação da Protética">
     <meta name="author" content="LayoutIt!">
-
+	<link rel="icon" type="image/jpg" href="{% static 'img/favicon.jpg' %}" />
     <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
     <link href="{% static 'css/style.css' %}" rel="stylesheet"><script src="js/jquery.min.js"></script>
     <script src="{% static 'js/bootstrap.min.js' %}"></script>
@@ -35,10 +35,6 @@
     <div class="container-fluid">
 	<div class="row">
 		<div class="col-md-12">
-				 
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-					<span class="navbar-toggler-icon"></span>
-				</button> <a class="navbar-brand" href="#">Brand</a>
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="navbar-nav">
 						<li class="nav-item active">
@@ -79,13 +75,10 @@
 			</nav>
 			<div class="jumbotron">
 				<h2>
-					Hello, world!
+					Organizando sua produção laboratorial com Caroline Pereira Eusébio.
 				</h2>
 				<p>
-					This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.
-				</p>
-				<p>
-					<a class="btn btn-primary btn-large" href="#">Learn more</a>
+					Confira em breve mais informações sobre os trabalhos feitos por Caroline, na organização da produção laboratorial de protese dentária e como poder-lhe-á ajudar a deixar o seu laboratório organizado para melhor atender o seu cliente
 				</p>
 			</div>
 			<div class="row">
@@ -94,15 +87,18 @@
 			</div>
 			<div class="card">
 				<h5 class="card-header">
-					Card title
+					Mais detalhes sobre a Protética
 				</h5>
 				<div class="card-body">
 					<p class="card-text">
-						Card content
+						<img src="{% static 'img/carol.jpeg' %}" alt="Foto de Caroline pereira Eusébio Coelho"
+							 class="img-thumbnail float-start me-3"/>
+						Caroline é protética cadista (CAD/CAM), trabalhou no laboratório de Prótese Ararangua por mais
+						de 10 anos, onde lá, solidificou a sua carreira como protética, implementando vários conceitos
+						organizacionais de produção, onde quase triplicou o faturamento mensal da empresa, com uma visão
+						técnológica implementou o CAD/CAM, e atualmente está a aperfeiçoar o seu conhecimento na
+						Produção de Próteses Dentária Digital.
 					</p>
-				</div>
-				<div class="card-footer">
-					Card footer
 				</div>
 			</div>
 		</div>
