@@ -15,7 +15,7 @@ def test_status_code(resp):
 
 
 def test_title(resp):
-    assert_contains(resp, '<title>Protética Carol</title>')
+    assert_contains(resp, '<title>Protética Carol - Home</title>')
 
 
 def test_home_link(resp):
