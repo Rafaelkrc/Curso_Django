@@ -1,0 +1,21 @@
+{% extends 'base/base.html' %}
+{% load static %}
+
+{% block title %}Protética Carol - Aperitivos{% endblock title %}
+{% block description %}Pagina com todos os Vídeos{% endblock description %}
+{% block body %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="mt-4 mb-3">Lista de Vídeos</h1>
+                <ol>
+                    {% for video in videos %}
+                        <li>{{ video.titulo | default:"Faltando Título"}}</li>
+                    {% empty %}
+                        <li>Não foi encontrado nenhum Vídeo!</li>
+                    {% endfor %}
+                </ol>
+            </div>
+        </div>
+    </div>
+{% endblock body %}
