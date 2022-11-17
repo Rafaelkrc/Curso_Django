@@ -6,7 +6,8 @@ class Video:
         self.slug = slug
         self.titulo = titulo
         self.vimeo_id = vimeo_id
-        
+
+
 videos = [
     Video('motivacao', 'Video Aperitivo: Motivação', '770651906?h=511e20b27b&amp'),
     Video('comemoracao', 'Comemoração', '771135617?h=f0b1ac0ee3&amp')
