@@ -20,3 +20,7 @@ def test_title(resp):
 
 def test_home_link(resp):
     assert_contains(resp, f'href="{reverse("base:home")}">Protética Carol</a>')
+
+
+def test_email_link(resp):
+    assert_contains(resp, 'href="mailto:carolinepeusebio@gmail.com"')
