@@ -152,6 +152,8 @@ COLLECTFAST_ENABLE = False
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+CSRF_TRUSTED_ORIGINS = ["https://cursodjango.fly.dev"]
+
 AWS_ACCESS_KEY_ID = config('AWS_ACCESS_KEY_ID')
 
 # STORAGE AWS CONFIGS
