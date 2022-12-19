@@ -1,17 +1,16 @@
-name: Django CI
+name: Integração continua
 
 on:
-  push:
+  pull_request:
     branches:
       - main
 
-  pull_request:
+  push:
     branches:
       - main
 
 jobs:
   ci:
-    name: Integração Continua
     runs-on: ubuntu-latest
     env:
       PIPENV_NO_INHERIT: 1
@@ -27,9 +26,9 @@ jobs:
         ports: ['5432:5432']
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: Setup Python
-        uses: actions/setup-python@v1
+        uses: actions/setup-python@v3
         with:
           python-version: 3.11.0
           architecture: x64
@@ -52,15 +51,3 @@ jobs:
           CODECOV_TOKEN: '03525e52-3f9c-4cd9-97ac-ea5fdea1f317'
         run: |
           pipenv run codecov
-
-  deploy:
-    name: Deploy
-    runs-on: ubuntu-latest
-    needs: ci
-    env:
-      FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
-    steps:
-      - uses: actions/checkout@v3
-      - uses: superfly/flyctl-actions/setup-flyctl@master
-      - run: flyctl deploy --remote-only
-
