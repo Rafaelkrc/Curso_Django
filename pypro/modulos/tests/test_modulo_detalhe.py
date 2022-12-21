@@ -8,8 +8,7 @@ from pypro.modulos.models import Modulo, Aula
 
 @pytest.fixture
 def modulo(db):
-    return mommy.make(Modulo)\
-
+    return mommy.make(Modulo)
 
 
 @pytest.fixture
