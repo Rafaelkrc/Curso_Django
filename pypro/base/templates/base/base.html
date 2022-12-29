@@ -40,7 +40,20 @@
           </ul>
         </li>
       </ul>
-      <a class="btn btn-light my-2" href="{% url 'login' %}">Entrar</a>
+    {% if user.is_authenticated %}
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            {{ user.first_name }}
+          </a>
+          <div class="dropdown-menu">
+           <button type="button" class="dropdown-item">Sair</button>
+          </div>
+        </li>
+      </ul>
+    {% else %}
+    <a class="btn btn-light my-2" href="{% url 'login' %}">Entrar</a>
+    {% endif %}
     </div>
   </div>
 </nav>
