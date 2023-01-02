@@ -98,6 +98,7 @@ EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
 EMAIL_USER_TLS = config('EMAIL_USER_TLS')
 DEFAULT_FROM_EMAIL=config('DEFAULT_FROM_EMAIL')
 
+
 # Configuração Django Debug Tollbar
 
 INTERNAL_IPS = config('INTERNAL_IPS', cast=Csv(), default='127.0.0.1')
